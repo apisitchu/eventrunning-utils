@@ -1,0 +1,12 @@
+running-tag-recognition-1.3.1 add date taken
+running-tag-recognition-1.4.0 add wtm for free download
+
+running-tag-recognition-1.5.0 connect db mtc
+running-tag-recognition-1.5.1.zip check data taken format
+running-tag-recognition-1.5.2.zip แก้ไขเรื่องวันที่ถ่ายภาพ เพิ่ม
+
+sportaction-tag-recognition-1.5.2.zip sportaction initial
+sportaction-tag-recognition-1.5.4.zip แก้เรื่องรูป 1:1 เป็นแนวนอน
+sportaction-tag-recognition-1.5.5.zip ไปใช้ลายน้ำกลาง
+---------------------------------------------
+eventrunning-tag-recognition-2.0.0.zip initial

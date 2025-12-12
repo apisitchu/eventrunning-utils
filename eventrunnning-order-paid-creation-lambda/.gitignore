@@ -1,0 +1,4 @@
+node_modules
+dist
+sharp_unix
+sharp_win32

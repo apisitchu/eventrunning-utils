@@ -1,0 +1,5 @@
+sportaction-upload-file-lambda-v1.3.1.zip sport action initial
+sportaction-upload-file-lambda-v1.3.1.zip เพิ่ม falied-size-not-support ต่ำกว่า 400kb reject
+sportaction-upload-file-lambda-v1.3.2.zip เพิ่ม is_event_stage,event_stage
+----------------------------------------
+eventrunning-upload-file-lambda-v2.0.0.zip initial

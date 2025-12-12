@@ -1,0 +1,16 @@
+{
+  "name": "running-order-paid-creation-by-image-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.369.0",
+    "@aws-sdk/credential-providers": "^3.369.0",
+    "sharp": "^0.32.4"
+  }
+}
