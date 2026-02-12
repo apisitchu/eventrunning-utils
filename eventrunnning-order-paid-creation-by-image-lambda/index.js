@@ -5,7 +5,7 @@ const { fromCognitoIdentityPool } = require('@aws-sdk/credential-providers');
 
 const region = 'ap-southeast-1';
 const s3Client = new S3Client({});
-const bucketName = 'sportaction-cloud';
+const bucketName = 'eventrunning-cloud';
 // Configure the Rekognition client
 const rekognitionClient = new RekognitionClient({ region: region, credentials: fromCognitoIdentityPool({ identityPoolId: 'ap-southeast-1:305f64a7-8ac3-4850-a02d-8df1d85c94d1' }) });
 const sharp = require("sharp");

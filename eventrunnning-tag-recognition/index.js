@@ -46,8 +46,8 @@ exports.handler = async function (event) {
 
         const event_watermark_hori = "assest/watermark/wtm_hori.png";
         const event_watermark_vertical = "assest/watermark/wtm_verti.png";
-        const event_thumbnail_watermark_hori = "assest/watermark/tmn_wtm_hori.png";
-        const event_thumbnail_watermark_vertical = "assest/watermark/tmn_wtm_verti.png";
+        //const event_thumbnail_watermark_hori = "assest/watermark/tmn_wtm_hori.png";
+        //const event_thumbnail_watermark_vertical = "assest/watermark/tmn_wtm_verti.png";
         const is_free_download = queueMsg.is_free_download;
         const event_key = queueMsg.event_key;
         const is_add_watermark_for_free_download = queueMsg.is_add_watermark_for_free_download;
@@ -81,7 +81,7 @@ exports.handler = async function (event) {
                 //console.log("exif:",image_metadata.exif);
                 const exif = exifReader(image_metadata.exif)
                 if (image_metadata.width >= image_metadata.height) {
-                    const image_byte_tmn_watermark_hori = await getObject_(event_thumbnail_watermark_hori);
+                    //const image_byte_tmn_watermark_hori = await getObject_(event_thumbnail_watermark_hori);
 
                     if (is_free_download !== 'Y') {
                         const image_byte_watermark_hori = await getObject_(event_watermark_hori);
@@ -106,11 +106,12 @@ exports.handler = async function (event) {
                         .resize({
                             width: width_thumbnail,
                             height: height_thumbnail
-                        }).composite([
-                            {
-                                input: image_byte_tmn_watermark_hori
-                            },
-                        ])
+                        })
+                        // .composite([
+                        //     {
+                        //         input: image_byte_tmn_watermark_hori
+                        //     },
+                        // ])
                         //.webp({ quality: quality_const })
                         .toBuffer();
                     await pushObject_(image_buffer_thumbnail, thumbnail_file_name);
@@ -155,7 +156,7 @@ exports.handler = async function (event) {
 
     
                 } else {
-                    const image_byte_tmn_watermark_vertical = await getObject_(event_thumbnail_watermark_vertical);
+                    //const image_byte_tmn_watermark_vertical = await getObject_(event_thumbnail_watermark_vertical);
                     
                     if (is_free_download !== 'Y') {
                         const image_byte_watermark_vertical = await getObject_(event_watermark_vertical);
@@ -177,11 +178,12 @@ exports.handler = async function (event) {
                         .resize({
                             width: height_thumbnail,
                             height: width_thumbnail
-                        }).composite([
-                            {
-                                input: image_byte_tmn_watermark_vertical
-                            },
-                        ])
+                        })
+                        // .composite([
+                        //     {
+                        //         input: image_byte_tmn_watermark_vertical
+                        //     },
+                        // ])
                         //.webp({ quality: quality_const })
                         .toBuffer();
                     await pushObject_(image_buffer_thumbnail, thumbnail_file_name);

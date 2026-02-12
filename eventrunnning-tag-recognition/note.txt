@@ -10,3 +10,4 @@ sportaction-tag-recognition-1.5.4.zip แก้เรื่องรูป 1:1 �
 sportaction-tag-recognition-1.5.5.zip ไปใช้ลายน้ำกลาง
 ---------------------------------------------
 eventrunning-tag-recognition-2.0.0.zip initial
+eventrunning-tag-recognition-2.0.1.zip เอาลายน้ำที่ปิดบนรูป thamnal ออก

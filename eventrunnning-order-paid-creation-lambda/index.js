@@ -43,7 +43,7 @@ exports.handler = async function (event, context, callback) {
     const confirm_key = queueMsg.confirm_key;
     const is_logo = queueMsg.is_logo; //Y,N
 
-     const imageList = JSON.parse(JSON.stringify(images) + "");
+     
 
      //send sms/email befor process logo image
      console.log("[" + order_id + "]is_send_email : start")
@@ -54,7 +54,7 @@ exports.handler = async function (event, context, callback) {
     
     console.log("[" + order_id + "]is_logo: " + is_logo)
     if (is_logo === "Y") {
-
+        const imageList = JSON.parse(JSON.stringify(images) + "");
         let check_logo_process = await check_update_order_is_logo_image_done(order_id);
         console.log("[" + order_id + "]check_logo_process: " + check_logo_process);
         if (!check_logo_process) {
